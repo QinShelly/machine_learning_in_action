@@ -92,5 +92,11 @@ if __name__ == '__main__':
     # D = list(map(set,dataSet))
     # L1, suppData0 = scanD(D, C1, 0.5)
     
-    L, suppData = apriori(dataSet, minSupport=0.5)
-    rules = generateRules(L, suppData, minConf = 0.7)
+    # L, suppData = apriori(dataSet, minSupport=0.5)
+    # rules = generateRules(L, suppData, minConf = 0.7)
+
+    mushDataSet = [line.split() for line in open('mushroom.dat')]
+    L, suppData = apriori(mushDataSet, minSupport=0.3)
+    for item in L[1]:
+        if item.intersection('2'): print (item)
+
