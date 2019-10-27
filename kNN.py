@@ -3,7 +3,7 @@
 """
 Created on Sat Aug 10 14:30:45 2019
 
-@author: kenyao
+@author: ken yao
 """
 
 from numpy import * 
